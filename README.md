@@ -10,8 +10,8 @@ This is a React-based project that demonstrates fetching and displaying data fro
 - **Axios** is used for making HTTP requests from React to the PHP API endpoints.
 - The project includes **copy versions** of the `data` and `api` folders inside the project directory for reference and testing purposes.
 - The **real data** and **API endpoints** are hosted on my server at [yasir.world/KitchenSpurs](https://yasir.world/KitchenSpurs), and the React app in production would ideally fetch data from these endpoints.
-- Endpoint for orders http://yasir.world/KitchenSpurs/api/api.php?endpoint=orders
-- Endpoint for restaurants http://yasir.world/KitchenSpurs/api/api.php?endpoint=restaurants
+- Endpoint for orders https://yasir.world/KitchenSpurs/api/api.php?endpoint=orders
+- Endpoint for restaurants https://yasir.world/KitchenSpurs/api/api.php?endpoint=restaurants
 
 ## Points-wise
 
