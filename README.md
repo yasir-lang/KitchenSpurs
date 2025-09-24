@@ -9,7 +9,22 @@ This is a React-based project that demonstrates fetching and displaying data fro
 - The project uses **React** for the frontend and **PHP** to fetch data from JSON files.
 - **Axios** is used for making HTTP requests from React to the PHP API endpoints.
 - The project includes **copy versions** of the `data` and `api` folders inside the project directory for reference and testing purposes.
-- The **real data** and **API endpoints** are hosted on my server at [yasir.world](https://yasir.world), and the React app in production would ideally fetch data from these endpoints.
+- The **real data** and **API endpoints** are hosted on my server at [yasir.world/KitchenSpurs](https://yasir.world/KitchenSpurs), and the React app in production would ideally fetch data from these endpoints.
+- Endpoint for orders http://yasir.world/KitchenSpurs/api/api.php?endpoint=orders
+- Endpoint for restaurants http://yasir.world/KitchenSpurs/api/api.php?endpoint=restaurants
+
+## Points-wise
+
+- **Frontend:** React  
+- **Backend:** PHP (for fetching JSON data)  
+- **HTTP Requests:** Axios  
+- **Styling:** Bootstrap  
+- **Data:** JSON files (`orders.json`, `restaurants.json`)  
+- **Reference Folders:** `data/` and `api/` included for local testing  
+
+
+> **Note:** The `data` and `api` folders inside the project are for reference/testing only. The live versions are on the server.
+
 
 ---
 
