@@ -4,14 +4,14 @@ header("Access-Control-Allow-Origin: *");
 header("Content-Type: application/json");
 
 
-// Utility: Load JSON
+//this function loads the json file 
 function loadJson($filename) {
     $path = __DIR__ . '/../data/' . $filename;
     if (!file_exists($path)) return [];
     return json_decode(file_get_contents($path), true) ?? [];
 }
 
-// Detect which endpoint is requested
+//I have created teo end points using switch-break. I must add that restaurants.json and orders.json are on my server hosted at yasir.world
 $endpoint = $_GET['endpoint'] ?? 'restaurants';
 
 switch ($endpoint) {
@@ -23,7 +23,7 @@ switch ($endpoint) {
         break;
 }
 
-// ------------------- HANDLERS -------------------
+//handlers
 
 function handleRestaurants() {
     $restaurants = loadJson('restaurants.json');
@@ -34,7 +34,7 @@ function handleRestaurants() {
     $page   = (int)($_GET['page'] ?? 1);
     $limit  = (int)($_GET['limit'] ?? 10);
 
-    // Filter
+    //filter
     if ($search) {
         $restaurants = array_filter($restaurants, function($r) use ($search) {
             return stripos($r['name'], $search) !== false ||
@@ -43,7 +43,7 @@ function handleRestaurants() {
         });
     }
 
-    // Sort
+    //sort
     usort($restaurants, function($a, $b) use ($sort, $order) {
         $valA = $a[$sort] ?? '';
         $valB = $b[$sort] ?? '';
@@ -51,7 +51,7 @@ function handleRestaurants() {
         return $order === 'desc' ? -$cmp : $cmp;
     });
 
-    // Pagination
+    //pagination
     $total = count($restaurants);
     $offset = ($page - 1) * $limit;
     $restaurants = array_slice($restaurants, $offset, $limit);
@@ -70,7 +70,7 @@ function handleRestaurants() {
 function handleOrders() {
     $orders = loadJson('orders.json');
 
-    // Optional filters
+    //morefilters
     $restaurantId = $_GET['restaurant_id'] ?? null;
     $dateFrom = $_GET['from'] ?? null;
     $dateTo   = $_GET['to'] ?? null;
@@ -90,3 +90,4 @@ function handleOrders() {
         ]
     ], JSON_PRETTY_PRINT);
 }
+//author- Mohammad Yasir
