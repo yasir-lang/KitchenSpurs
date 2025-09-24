@@ -46,8 +46,10 @@ This is a React-based project that demonstrates fetching and displaying data fro
 
 1. **Clone or download** the project to your local machine.
 2. Open a terminal and navigate to the project directory:
+3. Make sure you have node installed
+4. cd the exact path where you project is located
+5. npm start
+6. go to src folder and start you work on App.js
 
 ```bash
-cd path/to/project-root
-Mohammad Yasir
-Website: https://yasir.world
+
