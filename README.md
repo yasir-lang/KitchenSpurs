@@ -1,4 +1,4 @@
-# React Orders & Restaurants Project
+# Restaurant tracking and analysis( Assignment from KitchenSpurs, submitted by Mohammad Yasir)
 
 This is a React-based project that demonstrates fetching and displaying data from **orders** and **restaurants** JSON files using PHP and Axios for HTTP requests.
 
